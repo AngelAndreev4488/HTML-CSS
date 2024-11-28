@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .timeline-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    border: 0.3rem solid rgb(153, 153, 153); /* Adjust the thickness and color as needed */
+    padding: 1em 3em 0em; /* Add padding to ensure content is not touching the border */
+    margin: 0 auto; /* Center the container */
+    max-width: 800px; /* Adjust the width as needed */
+  }
+  .center-text {
+    width: 30%;
+    border: solid 2px rgb(153, 153, 153);
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+    padding: 5px; /* Add padding to ensure it's not cut off */
+    margin-bottom: 0px;
+  }
+  
+  .timeline {
+    
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(153, 153, 153);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  article {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+  }
+  
+  article::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: green;
+    border: 0.3rem solid rgb(153, 153, 153);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  article:nth-child(odd) {
+    left: 50%;
+  }
+  
+  article:nth-child(even) {
+    left: 0;
+    text-align: right;
+  }
+  
+  article:nth-child(even)::after {
+    background-color: orange;
+    right: -16px;
+  }
+  article:nth-child(odd)::after {
+    left: -16px;
+  }
+  header {
+    padding: 20px;
+    position: relative;
+  }
+  
+
+  header h3 {
+    font-style: italic;
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  header p {
+    margin: 0;
+  }
+  
+  section {
+    margin-top: 10px;
+  }
+  
+  section p {
+    margin: 0 0 10px;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 500px) {
+    .timeline {
+      border: none;
+      padding: 0;
+    }
+  
+    .timeline::after {
+      left: 20px;
+    }
+  
+    article {
+      width: 100%;
+      padding: 10px 20px;
+    }
+  
+    article::after {
+      left: 10px;
+      right: auto;
+    }
+  
+    article:nth-child(odd),
+    article:nth-child(even) {
+      left: 0;
+    }
+  
+    .center-text {
+      width: 90%;
+    }
+  }
+  
+  header {
+    width: 100%;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  

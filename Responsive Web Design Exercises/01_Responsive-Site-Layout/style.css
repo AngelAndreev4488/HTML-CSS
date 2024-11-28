@@ -1,0 +1,51 @@
+html {
+  background-color: white;
+}
+
+body {
+  background-color: transparent; /* Set background to transparent */
+  display: flex; /* Make the body a flex container */
+  flex-wrap: wrap;
+  flex-direction: row; /* Default direction: row */
+  gap: 1em; /* Space between flex items */
+  padding: 2em; /* Padding around the container */
+  margin: 0; /* Remove margin from body */
+  align-items: flex-start;
+}
+
+@media (max-width: 500px) {
+  body {
+      flex-direction: column; /* Change to column for screens less than 500px wide */
+  }
+}
+
+header, main, aside, footer {
+  background-color: rgb(181, 216, 255); /* Background color for each container */
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for visual separation */
+  border-radius: 2px; /* Optional: rounds the corners */
+  flex: 1; /* Ensure items take up available space equally */
+  align-items: flex-start;
+}
+
+header {
+  display: flex;
+  justify-content: left; /* Centers content horizontally */
+  align-items: flex-start; /* Centers content vertically */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em; /* Add space between items inside aside */
+}
+
+footer {
+  text-align: left;
+}
